@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Shuffle Puzzle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/shuffle.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body>
+        <header>
+            <!-- select picture for puzzle -->
+            <ol id="puzzles">
+                <li>
+                    <figure id="parrot">
+                        <img src="img/parrot.png" alt="The parrot puzzle" width="100"/>
+                        <figcaption>The parrot puzzle</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure id="cat">
+                        <img src="img/cat.png" alt="The cat puzzle" width="100"/>
+                        <figcaption>The cat puzzle</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure id="moon">
+                        <img src="img/moon.png" alt="The Moon puzzle" width="100"/>
+                        <figcaption>The moon puzzle</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure id="rockies">
+                        <img src="img/rockies.png" alt="The Rocky Mountains puzzle" width="100"/>
+                        <figcaption>The Rocky Mountains puzzle</figcaption>
+                    </figure>
+                </li>
+            </ol>
+        </header>
+        <div role="main">
+            <!-- where the puzzle lives -->
+            <p>First Paragraph</p>
+            <p>Second Paragraph</p>
+            <p>Yet one more Paragraph</p>
+
+            <script>
+            $( "#test" ).click(function() {
+              $( this ).slideUp();
+            });
+            </script>
+        </div>
+        <footer>
+            <!-- stats about the puzzle;
+                1) how long its taking
+                2) how long it took last time
+                3) best ever score -->
+            <ol>
+                <li>Time taken:</li>
+                <li>Last time:</li>
+                <li>Best time:</li>
+            </ol>
+        </footer>
+    </body>
+    <script src="scripts/shuffle.js"></script>
+</html>
