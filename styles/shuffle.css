@@ -12,7 +12,11 @@ and open the template in the editor.
 
 header {
     border-bottom: 1px solid black;
-    background-color: gray;
+
+    background: -webkit-linear-gradient(#333333,#999999); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#333333,#999999); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#333333,#999999); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#333333,#999999); /* Standard syntax */
 }
 
 #puzzles {
@@ -38,11 +42,21 @@ img {
     border: 0px;
 }
 
+figure > img 
+{
+    border: 1px solid darkgrey;
+}
+
 figure {
-    border: 2px solid gray;
+    padding: 5px;
+    border: 2px solid purple;
 }
 figure:hover {
     border: 2px solid white;
+}
+figcaption
+{
+    text-align: center;
 }
 
 #parrot {
@@ -72,7 +86,16 @@ figure:hover {
 /* puzzle section */
 
 div[role="main"] {
-    background-color: lightgray;
+    border-top: 4px solid purple;
+    background: -webkit-linear-gradient(#cccccc,#999999,#cccccc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#cccccc,#999999,#cccccc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#cccccc,#999999,#cccccc); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#cccccc,#999999,#cccccc); /* Standard syntax */
+    border-bottom: 4px solid purple;
+}
+
+#outerPuzzle {
+    border: 1px solid white;
 }
 
 #puzzlegrid {
@@ -89,25 +112,40 @@ div[role="main"] {
     
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
+    padding-left: 10px;
+    width: 420px;
+    
+    border-left: 3px solid purple;
+    border-right: 3px solid purple;
+    
+    background: -webkit-linear-gradient(#333333,#999999); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#333333,#999999); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#333333,#999999); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#333333,#999999); /* Standard syntax */
 }
 
 #puzzlegrid > ol 
 {
     list-style-type: none;
     padding: 0px;
+    
 }
-
-#puzzlegrid > ol > li 
+#puzzlegrid > ol > li
 {
-    border: 1px dotted grey;
+    border: 1px dashed #ffffff;
     width: 100px;
     height: 100px;
 }
 
 #puzzlegrid > ol > li:hover 
 {
-    background-color: yellow;
+    background-color: purple;
+}
+
+
+#puzzlegrid > ol > li > img:hover
+{
+    border: 1px solid white;
 }
 
 #cell1,#cell5,#cell9,#cell13 {
@@ -137,7 +175,14 @@ div[role="main"] {
 /* footer section */
 footer {
     border-top: 1px solid black;
-    background-color: darkgray;
+    background: -webkit-linear-gradient(#333333,#999999)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#333333,#999999); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#333333,#999999); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#333333,#999999); /* Standard syntax */
+    
+    color: #ffffff;
+    
+    border-bottom: 4px solid purple;
 }
 
 footer > ol {
