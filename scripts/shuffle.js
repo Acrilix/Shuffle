@@ -10,6 +10,7 @@ var puzzlePieces = []; //15 pieces
 var imgPath = "";
 var emptyCell = 0;
 var neighbouringPieces = []; //what pieces are neighbours of the current cell
+var shuffleCount = 0;
 
 $("#parrot").click(function() {
     prepareThePuzzle("parrot");
@@ -58,6 +59,9 @@ function prepareThePuzzle(puzzleName)
     //display img sections in order in the puzzle grid.
     loadPuzzle();
     
+    //reset the shuffle counter
+    shuffleCount = 0;
+    
     //wait 1 second;
     //shuffle the pieces until all items have moved at least once.
     setTimeout(shufflePuzzle(2),1000);
@@ -86,7 +90,7 @@ function loadPuzzle()
             {
                 //don't put anything in the first cell when first display the puzzle.
                 puzzlePieces[pieceCount] = [r,c]; //piece 0 is the empty cell!
-                emptyCell = pieceCount;
+                emptyCell = 1; //top left cell is also the starting point.
             }
             else
             {
@@ -95,7 +99,7 @@ function loadPuzzle()
                 puzzlePieces[pieceCount] = [r,c];
             
                 //cellContents = pieceCount + "<br/>";
-                cellContents = "<img id='piece" + pieceCount + "' src='" + imgPath + pieceCount + ".png'/>";
+                //cellContents = "<img id='piece" + pieceCount + "' src='" + imgPath + pieceCount + ".png'/>";
             
                 //testing, display the piece No. in the div tag.
                 //$("#cell" + (pieceCount + 1)).html(cellContents);
@@ -112,15 +116,40 @@ function loadPuzzle()
 
 function shufflePuzzle(activeCell)
 {
-    //shuffle the pieces until all have been moved at least once.
+    //alert("shuffle: " + shuffleCount);
+    if(shuffleCount < 50)
+    {
+        //shuffle the pieces until all have been moved at least once.
+
+        //start at cell2
+        //alert("activeCell " + activeCell + "moving to emptyCell " + emptyCell);
+        movePiece(activeCell); //move to empty cell
+
+        //identify what cells are around the new empty cell, randomly select one of them.
+        activeCell = selectNeighbour();
+        //alert("New activeCell " + activeCell);
+
+        //increment the shuffle counter
+        shuffleCount++;
+
+        //start the process again.   
+        shufflePuzzle(activeCell);
+    }
+}
+
+function movePiece(activeCell)
+{
+    var prevEmpty = emptyCell;
+    var prevActive = activeCell;
     
-    //start at cell2
-    movePiece(activeCell); //move to empty cell
+    //move the image in the activeCell to the emptyCell.
+    var kids = $("#cell" + activeCell).children();
+    kids.detach().appendTo("#cell" + emptyCell);
     
-    //identify what cells are around the new empty cell
-    activeCell = selectNeighbour();
+    //reset emptyCell
+    emptyCell = prevActive;
+    activeCell = prevEmpty;
     
-    //randomly select one of them, and start the process again.
 }
 
 function selectNeighbour()
@@ -180,6 +209,8 @@ function selectNeighbour()
     }
     
     //select a neighbour at random
+    //alert(neighbouringPieces.length);
+    
     chosenNeighbour = neighbouringPieces[Math.floor(Math.random()*neighbouringPieces.length)];
     
     return chosenNeighbour;
@@ -195,6 +226,9 @@ $("#cell1").click(function() {
 
 $("#cell2").click(function() {
     alert("You clicked square 2");
+    
+    var kids = $("#cell2").children();
+    kids.detach().appendTo("#cell1");
 });
 
 $("#cell3").click(function() {
