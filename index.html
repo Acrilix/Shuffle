@@ -23,15 +23,15 @@ and open the template in the editor.
                     </figure>
                 </li>
                 <li>
-                    <figure id="cat">
-                        <img src="img/cat.png" alt="The cat puzzle2" width="100"/>
-                        <figcaption>Cat</figcaption>
+                    <figure id="flower">
+                        <img src="img/flower.png" alt="The flower puzzle2" width="100"/>
+                        <figcaption>Flower</figcaption>
                     </figure>
                 </li>
                 <li>
-                    <figure id="moon">
-                        <img src="img/moon.png" alt="The Moon puzzle" width="100"/>
-                        <figcaption>Moon</figcaption>
+                    <figure id="primate">
+                        <img src="img/primate.png" alt="The primate puzzle" width="100"/>
+                        <figcaption>Primate</figcaption>
                     </figure>
                 </li>
                 <li>
@@ -42,6 +42,7 @@ and open the template in the editor.
                 </li>
             </ol>
         </header>
+        
         <div role="main">
             <!-- where the puzzle lives -->
             
@@ -79,12 +80,24 @@ and open the template in the editor.
                 1) how long its taking
                 2) how long it took last time
                 3) best ever score -->
-            <ol>
-                <li>Time taken:</li>
-                <li>Last time:</li>
-                <li>Best time:</li>
+            <ol id="footer_options">
+                <li></li>
+                <li>
+                    <ol>
+                        <li>Time taken:</li>
+                        <li>Last time:</li>
+                        <li>Best time:</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li id="completePuzzle">Show completed</li>
+                        <li id="easy">Easy</li>
+                        <li id="medium">Medium</li>
+                        <li id="hard">Hard</li> 
+                    </ol>
+                </li>
             </ol>
-
         </footer>
     </body>
     <script src="scripts/shuffle.js"></script>
