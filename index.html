@@ -46,33 +46,91 @@ and open the template in the editor.
         <div role="main">
             <!-- where the puzzle lives -->
             
-            <div id="puzzlegrid">
+            <div id="easyGrid" class="puzzleGrid">
 
                     <ol>
-                        <li id="cell1"></li>
-                        <li id="cell5"><img id="piece4"></li>
-                        <li id="cell9"><img id="piece8"></li>
-                        <li id="cell13"><img id="piece12"></li>
+                        <li id="easycell1"></li>
+                        <li id="easycell4"><img id="easypiece3"></li>
+                        <li id="easycell7"><img id="easypiece6"></li>
                     </ol>
                     <ol>
-                        <li id="cell2"><img id="piece1"></li>
-                        <li id="cell6"><img id="piece5"></li>
-                        <li id="cell10"><img id="piece9"></li>
-                        <li id="cell14"><img id="piece13"></li>
+                        <li id="easycell2"><img id="easypiece1"></li>
+                        <li id="easycell5"><img id="easypiece4"></li>
+                        <li id="easycell8"><img id="easypiece7"></li>
                     </ol>
                     <ol>
-                        <li id="cell3"><img id="piece2"></li>
-                        <li id="cell7"><img id="piece6"></li>
-                        <li id="cell11"><img id="piece10"></li>
-                        <li id="cell15"><img id="piece14"></li>
+                        <li id="easycell3"><img id="easypiece2"></li>
+                        <li id="easycell6"><img id="easypiece5"></li>
+                        <li id="easycell9"><img id="easypiece8"></li>
+                    </ol>
+            </div>
+            
+            <div id="mediumGrid" class="puzzleGrid">
+
+                    <ol>
+                        <li id="mediumcell1"></li>
+                        <li id="mediumcell5"><img id="mediumpiece4"></li>
+                        <li id="mediumcell9"><img id="mediumpiece8"></li>
+                        <li id="mediumcell13"><img id="mediumpiece12"></li>
                     </ol>
                     <ol>
-                        <li id="cell4"><img id="piece3"></li>
-                        <li id="cell8"><img id="piece7"></li>
-                        <li id="cell12"><img id="piece11"></li>
-                        <li id="cell16"><img id="piece15"></li>
+                        <li id="mediumcell2"><img id="mediumpiece1"></li>
+                        <li id="mediumcell6"><img id="mediumpiece5"></li>
+                        <li id="mediumcell10"><img id="mediumpiece9"></li>
+                        <li id="mediumcell14"><img id="mediumpiece13"></li>
+                    </ol>
+                    <ol>
+                        <li id="mediumcell3"><img id="mediumpiece2"></li>
+                        <li id="mediumcell7"><img id="mediumpiece6"></li>
+                        <li id="mediumcell11"><img id="mediumpiece10"></li>
+                        <li id="mediumcell15"><img id="mediumpiece14"></li>
+                    </ol>
+                    <ol>
+                        <li id="mediumcell4"><img id="mediumpiece3"></li>
+                        <li id="mediumcell8"><img id="mediumpiece7"></li>
+                        <li id="mediumcell12"><img id="mediumpiece11"></li>
+                        <li id="mediumcell16"><img id="mediumpiece15"></li>
                     </ol>
 
+            </div>
+            
+            <div id="hardGrid" class="puzzleGrid">
+
+                    <ol>
+                        <li id="hardcell1"></li>
+                        <li id="hardcell6"><img id="hardpiece5"></li>
+                        <li id="hardcell11"><img id="hardpiece10"></li>
+                        <li id="hardcell16"><img id="hardpiece15"></li>
+                        <li id="hardcell21"><img id="hardpiece20"></li>
+                    </ol>
+                    <ol>
+                        <li id="hardcell2"><img id="hardpiece1"></li>
+                        <li id="hardcell7"><img id="hardpiece6"></li>
+                        <li id="hardcell12"><img id="hardpiece11"></li>
+                        <li id="hardcell17"><img id="hardpiece16"></li>
+                        <li id="hardcell22"><img id="hardpiece21"></li>
+                    </ol>
+                    <ol>
+                        <li id="hardcell3"><img id="hardpiece2"></li>
+                        <li id="hardcell8"><img id="hardpiece7"></li>
+                        <li id="hardcell13"><img id="hardpiece12"></li>
+                        <li id="hardcell18"><img id="hardpiece17"></li>
+                        <li id="hardcell23"><img id="hardpiece22"></li>
+                    </ol>
+                    <ol>
+                        <li id="hardcell4"><img id="hardpiece3"></li>
+                        <li id="hardcell9"><img id="hardpiece8"></li>
+                        <li id="hardcell14"><img id="hardpiece13"></li>
+                        <li id="hardcell19"><img id="hardpiece18"></li>
+                        <li id="hardcell24"><img id="hardpiece23"></li>
+                    </ol>
+                    <ol>
+                        <li id="hardcell5"><img id="hardpiece4"></li>
+                        <li id="hardcell10"><img id="hardpiece9"></li>
+                        <li id="hardcell15"><img id="hardpiece14"></li>
+                        <li id="hardcell20"><img id="hardpiece19"></li>
+                        <li id="hardcell25"><img id="hardpiece24"></li>
+                    </ol>
             </div>
         </div>
         <footer>
@@ -80,6 +138,12 @@ and open the template in the editor.
                 1) how long its taking
                 2) how long it took last time
                 3) best ever score -->
+            <ol id="controls">
+                <li id="completePuzzle">Show completed</li>
+                <li id="easy">Easy</li>
+                <li id="medium">Medium</li>
+                <li id="hard">Hard</li> 
+            </ol>
             <ol id="footer_options">
                 <li></li>
                 <li>
@@ -90,12 +154,7 @@ and open the template in the editor.
                     </ol>
                 </li>
                 <li>
-                    <ol>
-                        <li id="completePuzzle">Show completed</li>
-                        <li id="easy">Easy</li>
-                        <li id="medium">Medium</li>
-                        <li id="hard">Hard</li> 
-                    </ol>
+                    
                 </li>
             </ol>
         </footer>

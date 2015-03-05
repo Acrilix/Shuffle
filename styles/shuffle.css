@@ -49,7 +49,8 @@ figure > img
 
 figure {
     padding: 5px;
-    border: 2px solid purple;
+    border: 2px solid yellow;
+    cursor: pointer;
 }
 figure:hover {
     border: 2px solid white;
@@ -86,19 +87,19 @@ figcaption
 /* puzzle section */
 
 div[role="main"] {
-    border-top: 4px solid purple;
+    border-top: 4px solid yellow;
     background: -webkit-linear-gradient(#cccccc,#999999,#cccccc); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#cccccc,#999999,#cccccc); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#cccccc,#999999,#cccccc); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#cccccc,#999999,#cccccc); /* Standard syntax */
-    border-bottom: 4px solid purple;
+    border-bottom: 4px solid yellow;
 }
 
 #outerPuzzle {
     border: 1px solid white;
 }
 
-#puzzlegrid {
+.puzzleGrid {
     display: -webkit-flex; /* Safari */
     -webkit-flex-flow: row wrap; /* Safari 6.1+ */
     
@@ -115,8 +116,8 @@ div[role="main"] {
     padding-left: 10px;
     width: 420px;
     
-    border-left: 3px solid purple;
-    border-right: 3px solid purple;
+    border-left: 3px solid yellow;
+    border-right: 3px solid yellow;
     
     background: -webkit-linear-gradient(#333333,#999999); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#333333,#999999); /* For Opera 11.1 to 12.0 */
@@ -124,26 +125,42 @@ div[role="main"] {
     background: linear-gradient(#333333,#999999); /* Standard syntax */
 }
 
-#puzzlegrid > ol 
+.puzzleGrid  > ol 
 {
     list-style-type: none;
     padding: 0px;
     
 }
-#puzzlegrid > ol > li
+
+#easyGrid > ol > li
+{
+    border: 1px dashed #ffffff;
+    width: 133px;
+    height: 133px;
+    cursor: pointer;
+}
+#mediumGrid > ol > li
 {
     border: 1px dashed #ffffff;
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
-
-#puzzlegrid > ol > li:hover 
+#hardGrid > ol > li
 {
-    background-color: purple;
+    border: 1px dashed #ffffff;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.puzzleGrid > ol > li:hover 
+{
+    background-color: yellow;
 }
 
 
-#puzzlegrid > ol > li > img:hover
+.puzzleGrid > ol > li > img:hover
 {
     border: 1px solid white;
 }
@@ -182,7 +199,7 @@ footer {
     
     color: #ffffff;
     
-    border-bottom: 4px solid purple;
+    border-bottom: 4px solid yellow;
 }
 
 footer > ol {
@@ -208,19 +225,51 @@ footer > ol {
     margin-left: auto;
     margin-right: auto;
     padding-left: 10px;
-    width: 700px;
+    width: 400px;
     list-style-type: none;
-    border: 1px solid red;
 }
 
 #footer_options > li
 {
-    padding-left: 50px;
-    border: 1px solid yellow;
+    padding-left: 0px;
 }
 
 #footer_options > li > ol
 {
     list-style-type: none;
+}
+
+#controls 
+{
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-flow: row wrap; /* Safari 6.1+ */
+    
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */ 
+    flex: 1;
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    width: 400px;
+    list-style-type: none;
+}
+
+#controls > li
+{
+    margin: 2px;
+    padding: 5px;
+    background: green;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#controls > li:hover
+{
+    background: darkgreen;
 }
 
