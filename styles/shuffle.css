@@ -31,6 +31,12 @@ p
     font-weight:lighter;
 }
 
+.acrilix_breadcrumb
+{
+    font-size: 12px;
+    colour: white;
+}
+
 #headerSpacer
 {
     height: 50px;
@@ -78,15 +84,21 @@ img {
 figure > img 
 {
     border: 1px solid darkgrey;
+    cursor: pointer;
+}
+
+figure > img:hover 
+{
+    border: 1px solid yellow;
+    cursor: pointer;
 }
 
 figure {
     padding: 5px;
-    border: 2px solid yellow;
-    cursor: pointer;
+    border: 0px solid yellow;
 }
 figure:hover {
-    border: 2px solid white;
+    border: 0px solid white;
 }
 figcaption
 {
@@ -163,6 +175,11 @@ div[role="main"] {
     cursor: pointer;
 }
 
+#mediumGrid > .gridCol  > li
+{
+    
+}
+
 .puzzleGrid > ol > li:hover 
 {
     background-color: yellow;
@@ -171,6 +188,11 @@ div[role="main"] {
 .puzzleGrid > ol > li > img
 {
     border: 1px solid white;
+}
+
+.puzzleGrid > ol > li > img:not([src])
+{
+    border: 0px;
 }
 
 .puzzleGrid > ol > li > img:hover
@@ -284,5 +306,9 @@ div[role="main"] {
 #controls > li:hover
 {
     background: darkgreen;
+}
+
+@media all and (max-width: 767px) {
+
 }
 
