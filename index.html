@@ -13,151 +13,155 @@ and open the template in the editor.
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
-        <header>
-            <!-- select picture for puzzle -->
-            <ol id="puzzles">
-                <li>
-                    <figure id="parrot">
-                        <img src="img/parrot.png" alt="The parrot puzzle" width="100"/>
-                        <figcaption>Parrot</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure id="flower">
-                        <img src="img/flower.png" alt="The flower puzzle2" width="100"/>
-                        <figcaption>Flower</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure id="primate">
-                        <img src="img/primate.png" alt="The primate puzzle" width="100"/>
-                        <figcaption>Primate</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure id="rockies">
-                        <img src="img/rockies.png" alt="The Rocky Mountains puzzle" width="100"/>
-                        <figcaption>Rockies</figcaption>
-                    </figure>
-                </li>
-            </ol>
-        </header>
-        
-        <div role="main">
-            <!-- where the puzzle lives -->
-            
-            <div id="easyGrid" class="puzzleGrid">
+    <header>
+        <h1>Shuffle</h1>
+        <p>Acrilix > Games > Shuffle</p>
+        <!-- select picture for puzzle -->
+        <ol id="puzzles">
+            <li id="puzzle_parrot">
+                <figure id="parrot">
+                    <img src="img/parrot.png" alt="The parrot puzzle" width="100"/>
+                    <figcaption>Parrot</figcaption>
+                </figure>
+            </li>
+            <li id="puzzle_flower">
+                <figure id="flower">
+                    <img src="img/flower.png" alt="The flower puzzle2" width="100"/>
+                    <figcaption>Flower</figcaption>
+                </figure>
+            </li>
+            <li id="puzzle_primate">
+                <figure id="primate">
+                    <img src="img/primate.png" alt="The primate puzzle" width="100"/>
+                    <figcaption>Primate</figcaption>
+                </figure>
+            </li>
+            <li id="puzzle_rockies">
+                <figure id="rockies">
+                    <img src="img/rockies.png" alt="The Rocky Mountains puzzle" width="100"/>
+                    <figcaption>Rockies</figcaption>
+                </figure>
+            </li>
+        </ol>
 
-                    <ol>
-                        <li id="easycell1"></li>
-                        <li id="easycell4"><img id="easypiece3"></li>
-                        <li id="easycell7"><img id="easypiece6"></li>
-                    </ol>
-                    <ol>
-                        <li id="easycell2"><img id="easypiece1"></li>
-                        <li id="easycell5"><img id="easypiece4"></li>
-                        <li id="easycell8"><img id="easypiece7"></li>
-                    </ol>
-                    <ol>
-                        <li id="easycell3"><img id="easypiece2"></li>
-                        <li id="easycell6"><img id="easypiece5"></li>
-                        <li id="easycell9"><img id="easypiece8"></li>
-                    </ol>
-            </div>
-            
-            <div id="mediumGrid" class="puzzleGrid">
+        <p>Please select one of the above images to start playing shuffle</p>
+    </header>
 
-                    <ol>
-                        <li id="mediumcell1"></li>
-                        <li id="mediumcell5"><img id="mediumpiece4"></li>
-                        <li id="mediumcell9"><img id="mediumpiece8"></li>
-                        <li id="mediumcell13"><img id="mediumpiece12"></li>
-                    </ol>
-                    <ol>
-                        <li id="mediumcell2"><img id="mediumpiece1"></li>
-                        <li id="mediumcell6"><img id="mediumpiece5"></li>
-                        <li id="mediumcell10"><img id="mediumpiece9"></li>
-                        <li id="mediumcell14"><img id="mediumpiece13"></li>
-                    </ol>
-                    <ol>
-                        <li id="mediumcell3"><img id="mediumpiece2"></li>
-                        <li id="mediumcell7"><img id="mediumpiece6"></li>
-                        <li id="mediumcell11"><img id="mediumpiece10"></li>
-                        <li id="mediumcell15"><img id="mediumpiece14"></li>
-                    </ol>
-                    <ol>
-                        <li id="mediumcell4"><img id="mediumpiece3"></li>
-                        <li id="mediumcell8"><img id="mediumpiece7"></li>
-                        <li id="mediumcell12"><img id="mediumpiece11"></li>
-                        <li id="mediumcell16"><img id="mediumpiece15"></li>
-                    </ol>
+    <div role="main">
+        <!-- where the puzzle lives -->
 
-            </div>
-            
-            <div id="hardGrid" class="puzzleGrid">
+        <div id="easyGrid" class="puzzleGrid">
 
-                    <ol>
-                        <li id="hardcell1"></li>
-                        <li id="hardcell6"><img id="hardpiece5"></li>
-                        <li id="hardcell11"><img id="hardpiece10"></li>
-                        <li id="hardcell16"><img id="hardpiece15"></li>
-                        <li id="hardcell21"><img id="hardpiece20"></li>
-                    </ol>
-                    <ol>
-                        <li id="hardcell2"><img id="hardpiece1"></li>
-                        <li id="hardcell7"><img id="hardpiece6"></li>
-                        <li id="hardcell12"><img id="hardpiece11"></li>
-                        <li id="hardcell17"><img id="hardpiece16"></li>
-                        <li id="hardcell22"><img id="hardpiece21"></li>
-                    </ol>
-                    <ol>
-                        <li id="hardcell3"><img id="hardpiece2"></li>
-                        <li id="hardcell8"><img id="hardpiece7"></li>
-                        <li id="hardcell13"><img id="hardpiece12"></li>
-                        <li id="hardcell18"><img id="hardpiece17"></li>
-                        <li id="hardcell23"><img id="hardpiece22"></li>
-                    </ol>
-                    <ol>
-                        <li id="hardcell4"><img id="hardpiece3"></li>
-                        <li id="hardcell9"><img id="hardpiece8"></li>
-                        <li id="hardcell14"><img id="hardpiece13"></li>
-                        <li id="hardcell19"><img id="hardpiece18"></li>
-                        <li id="hardcell24"><img id="hardpiece23"></li>
-                    </ol>
-                    <ol>
-                        <li id="hardcell5"><img id="hardpiece4"></li>
-                        <li id="hardcell10"><img id="hardpiece9"></li>
-                        <li id="hardcell15"><img id="hardpiece14"></li>
-                        <li id="hardcell20"><img id="hardpiece19"></li>
-                        <li id="hardcell25"><img id="hardpiece24"></li>
-                    </ol>
-            </div>
+                <ol class="gridCol">
+                    <li id="easycell1"></li>
+                    <li id="easycell4"><img id="easypiece3"></li>
+                    <li id="easycell7"><img id="easypiece6"></li>
+                </ol>
+                <ol class="gridCol">
+                    <li id="easycell2"><img id="easypiece1"></li>
+                    <li id="easycell5"><img id="easypiece4"></li>
+                    <li id="easycell8"><img id="easypiece7"></li>
+                </ol>
+                <ol class="gridCol">
+                    <li id="easycell3"><img id="easypiece2"></li>
+                    <li id="easycell6"><img id="easypiece5"></li>
+                    <li id="easycell9"><img id="easypiece8"></li>
+                </ol>
         </div>
-        <footer>
-            <!-- stats about the puzzle;
-                1) how long its taking
-                2) how long it took last time
-                3) best ever score -->
-            <ol id="controls">
-                <li id="completePuzzle">Show completed</li>
-                <li id="easy">Easy</li>
-                <li id="medium">Medium</li>
-                <li id="hard">Hard</li> 
-            </ol>
-            <ol id="footer_options">
-                <li></li>
-                <li>
-                    <ol>
-                        <li>Time taken:</li>
-                        <li>Last time:</li>
-                        <li>Best time:</li>
-                    </ol>
-                </li>
-                <li>
-                    
-                </li>
-            </ol>
-        </footer>
-    </body>
-    <script src="scripts/shuffle.js"></script>
+
+        <div id="mediumGrid" class="puzzleGrid">
+
+                <ol class="gridCol">
+                    <li id="mediumcell1"></li>
+                    <li id="mediumcell5"><img id="mediumpiece4"></li>
+                    <li id="mediumcell9"><img id="mediumpiece8"></li>
+                    <li id="mediumcell13"><img id="mediumpiece12"></li>
+                </ol>
+                <ol class="gridCol">
+                    <li id="mediumcell2"><img id="mediumpiece1"></li>
+                    <li id="mediumcell6"><img id="mediumpiece5"></li>
+                    <li id="mediumcell10"><img id="mediumpiece9"></li>
+                    <li id="mediumcell14"><img id="mediumpiece13"></li>
+                </ol>
+                <ol class="gridCol">
+                    <li id="mediumcell3"><img id="mediumpiece2"></li>
+                    <li id="mediumcell7"><img id="mediumpiece6"></li>
+                    <li id="mediumcell11"><img id="mediumpiece10"></li>
+                    <li id="mediumcell15"><img id="mediumpiece14"></li>
+                </ol>
+                <ol class="gridCol">
+                    <li id="mediumcell4"><img id="mediumpiece3"></li>
+                    <li id="mediumcell8"><img id="mediumpiece7"></li>
+                    <li id="mediumcell12"><img id="mediumpiece11"></li>
+                    <li id="mediumcell16"><img id="mediumpiece15"></li>
+                </ol>
+
+        </div>
+
+        <div id="hardGrid" class="puzzleGrid">
+
+                <ol class="gridCol">
+                    <li id="hardcell1"></li>
+                    <li id="hardcell6"><img id="hardpiece5"></li>
+                    <li id="hardcell11"><img id="hardpiece10"></li>
+                    <li id="hardcell16"><img id="hardpiece15"></li>
+                    <li id="hardcell21"><img id="hardpiece20"></li>
+                </ol>
+                <ol class="gridCol">
+                    <li id="hardcell2"><img id="hardpiece1"></li>
+                    <li id="hardcell7"><img id="hardpiece6"></li>
+                    <li id="hardcell12"><img id="hardpiece11"></li>
+                    <li id="hardcell17"><img id="hardpiece16"></li>
+                    <li id="hardcell22"><img id="hardpiece21"></li>
+                </ol>
+                <ol class="gridCol">
+                    <li id="hardcell3"><img id="hardpiece2"></li>
+                    <li id="hardcell8"><img id="hardpiece7"></li>
+                    <li id="hardcell13"><img id="hardpiece12"></li>
+                    <li id="hardcell18"><img id="hardpiece17"></li>
+                    <li id="hardcell23"><img id="hardpiece22"></li>
+                </ol>
+                <ol class="gridCol">
+                    <li id="hardcell4"><img id="hardpiece3"></li>
+                    <li id="hardcell9"><img id="hardpiece8"></li>
+                    <li id="hardcell14"><img id="hardpiece13"></li>
+                    <li id="hardcell19"><img id="hardpiece18"></li>
+                    <li id="hardcell24"><img id="hardpiece23"></li>
+                </ol>
+                <ol class="gridCol">
+                    <li id="hardcell5"><img id="hardpiece4"></li>
+                    <li id="hardcell10"><img id="hardpiece9"></li>
+                    <li id="hardcell15"><img id="hardpiece14"></li>
+                    <li id="hardcell20"><img id="hardpiece19"></li>
+                    <li id="hardcell25"><img id="hardpiece24"></li>
+                </ol>
+        </div>
+    </div>
+    <div id="shuffleFooter">
+        <!-- stats about the puzzle;
+            1) how long its taking
+            2) how long it took last time
+            3) best ever score -->
+        <ol id="controls">
+            <li id="completePuzzle">Show completed</li>
+            <li id="easy">Easy</li>
+            <li id="medium">Medium</li>
+            <li id="hard">Hard</li> 
+        </ol>
+        <ol id="footer_options">
+            <li></li>
+            <li>
+                <ol>
+                    <li>Time taken:</li>
+                    <li>Last time:</li>
+                    <li>Best time:</li>
+                </ol>
+            </li>
+            <li>
+
+            </li>
+        </ol>
+    </div>
+</body>
+<script src="scripts/shuffle.js"></script>
 </html>
